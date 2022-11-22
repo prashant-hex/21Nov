@@ -10,19 +10,23 @@ const LoginForm = (props) => {
         localStorage.setItem("username",name)
     }
 
-    // useEffect(()=>{
-    //     const interval = setInterval(() => {
-    //         setCounter((prevCounter) => prevCounter + 1);
-    //       }, 1000);
+    useEffect(()=>{
+        // const interval = setInterval(() => {
+        //     setCounter((prevCounter) => prevCounter + 1);
+        //   }, 1000);
 
-    //       return () => clearInterval(interval);
-    // },[])
+        //   return () => clearInterval(interval);
+
+        // setTimeout(() => {
+        //   alert('Hello, World!')
+        // }, 3000);
+    },[])
 
     const TimeFn = () => {
 
-        // setTimeout(() => {
-        //     alert('Hello, World!')
-        //   }, 3000);
+        setTimeout(() => {
+            alert('Hello, World!')
+          }, 3000);
         const interval = setInterval(() => {
             setCounter((prev) => prev + 1);
           }, 1000);

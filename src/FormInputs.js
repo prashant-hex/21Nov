@@ -1,12 +1,24 @@
-import React from 'react'
+import React , {useState} from 'react'
 
 const FormInputs = () => {
+
+  const [userDetails,setUserDetails] = useState({
+    fname:"",
+    lname:""
+  })
+
+  const handleUserInput = (e) =>{
+    const name = e.target.name;
+    const value = e.target.value;
+    setUserDetails({[name]:value})
+    console.log(userDetails)
+  }
   return (
     <>
         <input type="text"/>
-        <form>
+        <form onSubmit={handleUserInput}>
             <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"/><br/>
+            <input type="text" id="fname" name="fname" onChange={(e)=>handleUserInput(e)}/><br/>
             <label for="lname">Last name:</label>
             <input type="text" id="lname" name="lname"/><br/>
             <label for="password">password:</label>
@@ -25,6 +37,7 @@ const FormInputs = () => {
             <label for="vehicle2"> I have a car</label><br/>
             <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"/>
             <label for="vehicle3"> I have a boat</label>
+            <button type="submit">Submit</button>
         </form>
         
     </>

@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 export default class ClassComponent extends Component {
 
     constructor(props){
-        super(props);
-
+      super(props);
+      this.state = "value"
     }
 
     

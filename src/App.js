@@ -4,7 +4,8 @@ import Component from './Component';
 import ClassComponent from './ClassComponent';
 import LoginForm from './LoginForm';
 import FormInputs from './FormInputs';
-
+import Recursion from './Recursion';
+import Callback from './Callback';
 let apiData = {"name":"John", "age":30, "car":null}
 
 function App() {
@@ -47,7 +48,9 @@ function App() {
   return (
     <div className="App text-center">
     <p>App.js</p>
-    <FormInputs/>
+    <Recursion/>
+    <Callback/>
+    {/* <FormInputs/> */}
     <h3 className='h3text'>text</h3>
     <Component name="Data send as props"/>
     <ClassComponent value={{name:"abc", age:13}}/>
